@@ -1,0 +1,14 @@
+@mixin degrade{
+    
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -moz-background-clip: text;
+    background-image: linear-gradient($secondary-color, $primary-color);
+}
+
+/*@mixin suspension {
+    @if (.choix_prix:hover){
+        white-space: nowrap;
+    }
+}*/

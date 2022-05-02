@@ -1,0 +1,155 @@
+header{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: baseline;
+    i{
+        flex:3;
+        font-size: large;
+        margin-left: 20px;
+    }
+    h1{
+        flex:2;
+        margin: 10px 30px 10px 0;
+        font-size: x-large;
+    }
+}
+
+.menu{
+    width: 100%;
+    background-color: $bg-color;
+    border-radius: 50px 50px 0 0;
+    /*&_entrees{z-index: 2 ;}*/
+    position: absolute;
+    /*position: relative; top: -80px;*/  z-index: 2 ; margin-top: -50px;
+    /*top: 350px;*/
+    > div {
+        margin: 30px 10px;
+    }
+    &_img{
+        /*position: relative;*/
+        /*top: 50px;*/
+        z-index: 1 ;
+        border-radius: 0 0 0 0;
+        width: 100vw;
+    }
+    &_header{
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 0;
+    }
+    h1{
+        padding-top: 10px;
+        text-align: left;
+        padding-left: 10px;
+        font-size:x-large;
+        font-weight: 400;
+    }
+    h4{
+        width: 40px;
+        border-bottom: 3px solid $tertiary-color;
+    }
+    .fa-heart{
+        color: $bg-color;
+    }
+}
+
+.choix{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 20px;
+    margin: 10px 0;
+    box-shadow: 0 5px 5px darken($bg-color,15);
+    &_txt{
+        flex: 3;
+        overflow: hidden;
+        text-overflow:ellipsis; 
+        white-space: nowrap;
+        
+        /*width:300px;
+        @if (width: 300px){white-space: nowrap;
+        overflow:hidden;
+        text-overflow:clip;}@else {
+            overflow: hidden;
+            text-overflow:clip; white-space: wrap;}*/
+
+
+        /*@if (.choix_prix:hover) {white-space: nowrap;} @else {white-space: wrap;};*/
+        h3{
+            margin: 15px 0 5px 15px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        p{
+            margin: 5px 0 15px  15px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    &_prix{
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-evenly;
+        padding: 0 20px;
+        p{
+            margin-bottom: 10px;
+        }
+        &:hover + div{
+        display: initial;
+        display: flex;
+        align-items: center;
+        }
+    }
+    &_check{
+        display: none;
+        padding: 0 20px;
+        background-color: $tertiary-color;
+        border-radius: 0 20px 20px 0;
+        // transform-origin: 0% 50%; //deplace le centre d'origin à gauche (0% axe x et 50% axe y pour qu'il reste centré verticalement) retirer 50% (voir plus bas) ou mieux : juste "left" (voir encore plus bas)
+        // transform: scaleX(0); //s'elargie horizontalement
+        // transition: transform 1000ms cubic-bezier(.32,0,.07,1);//timing pour ralentir la fin
+        &:hover{
+            display: initial;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            //transform: scaleX(1);
+            i{
+                transform: rotate(1turn);
+            }
+        }
+        i{
+            color: white;
+            font-size: x-large;
+            transform: rotate(0turn);
+            transition: transform 500ms ease-in-out;
+            
+        }
+
+    }
+}
+
+.entrees > div, .plats > div, .desserts > div{ //sans pseudoelement : au chargment de la page
+    animation: menu_apparition;
+}
+
+
+@media screen and (min-device-width: 992px){
+    .menu{
+        &_header{
+            flex-direction: column;
+            align-items: center;}
+        >div h4{
+            text-align: center;
+        }
+        &_img{
+            object-position: 0 70%;
+        }
+    }
+
+        .image_center{
+            object-position: 0 60%;
+
+        }
+}

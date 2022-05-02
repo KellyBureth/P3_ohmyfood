@@ -1,0 +1,43 @@
+h1{
+    font-family: 'Shrikhand';
+    font-size: x-large;
+}
+
+
+
+p, a{
+    font-family: 'Roboto';
+    font-weight:400;
+    text-decoration: none;
+}
+
+footer a {
+    color: $footer_txt-color;
+}
+
+a, a:visited{
+    color: black;
+}
+
+h2, h3{
+    font-family: 'Roboto';
+    font-weight: bolder;
+}
+
+h4{
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+
+li{
+    font-family: 'Roboto';
+    font-weight: bold;
+}
+
+
+
+.footer_title {
+    font-weight: initial;
+    font-family: 'Shrikhand';
+    font-size: x-large;
+}

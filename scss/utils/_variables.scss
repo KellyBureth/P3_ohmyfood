@@ -1,0 +1,14 @@
+$primary-color: #9356DC; /*hsl(267, 66%, 60%)*/ 
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+/* en hsl : 	hsl(165, 56%, 74%) et en vert foncé	hsl(165, 100%, 26%) s: +44 l: -48 */
+$footer_bg-color: #353535;
+$footer_txt-color: #ffffff;
+$bg-color: #f6f6f6; /*	hsl(0, 0%, 96%)*/
+$bg-color--darken: #eaeaea; /*hsl(0, 0%, 92%) -4 */
+/*more darken #cecece Hsl	hsl(0, 0%, 81%) -15 degradé au de .localisation*/
+/*icone 7e7e7e 	hsl(0, 0%, 49%) -47*/
+$icone-color: #7e7e7e;
+
+/*hover violet 	hsl(267, 100%, 96%) 
+adjust-color($primary-color,  $saturation: 34%, $lightness: 36%);*/

@@ -1,0 +1,377 @@
+.reservation {
+    background-color: $bg-color;
+    text-align: center;
+    padding-bottom: 10%;
+    h2, p {
+    padding: 0 10%;
+    }
+}
+
+.localisation {
+    /*background-color: darken($bg-color,4);*/
+    /*box-shadow: inset 0 1em darken($bg-color,15);*/
+    background: linear-gradient(darken($bg-color,15) 1%, darken($bg-color,4) 8%);
+    /*border-top: 5px groove darken($bg-color,15);*/
+    text-align: center;
+    padding: 5% 0 5% 0;
+    /*border-top: 10px solid linear-gradient(darken($bg-color,15), darken($bg-color,4)) ;*/
+}
+
+.search {
+    text-align: center;
+    width: 35%;
+    border-style: none;
+    background-color: darken($bg-color, 4);
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: large;
+    
+}
+
+
+.fonctionnement {
+    padding: 10%;
+}
+
+
+ol {
+    list-style: none;
+    counter-reset: item;
+    li {
+        counter-increment: item;
+        background-color: $bg-color;
+        border-radius: 20px;
+        padding: 20px 20px 20px 10px;
+        margin:  20px 0;
+        box-shadow: 0 5px 5px darken($bg-color,15);
+        &:hover{
+            background-color: adjust-color($primary-color,  $saturation: 34%, $lightness: 36%);
+            > .fa-solid{
+                color: $primary-color;
+            }
+        }
+        .fa-solid {
+            color: $icone-color;
+        }
+        .fa-solid:hover {
+            color: $primary-color;
+        }
+        &:before {
+            content: counter(item);
+            background: $primary-color;
+            border-radius: 100%;
+            color: white;
+            width: 1.2em;
+            text-align: center;
+            display: inline-block;
+            position: relative;
+            left: -20px;
+            font-weight:500;
+            font-size: small;
+            padding: 3px;
+        }
+    }
+}
+
+
+.restaurants{
+    background-color: $bg-color;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    h2{
+    padding-left: 10%;
+    }
+    &_cards > div{
+        width: 330px;
+        margin: auto;
+        padding: 20px 0 0 0;
+        box-shadow: 0 5px 5px darken($bg-color,15);
+        border-radius: 50px 50px 20px 20px;
+    }
+}
+
+.under-img{
+    background-color: white;
+    padding: 10px;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    justify-content: space-between; /*horizontal*/
+    align-items: center; /*vertical*/
+
+    h3, p{
+        margin: 0;
+        padding-top: 5px;
+    }
+    &_icon button{
+        background: none;
+        border: none;
+    }
+}
+
+img{
+    border-radius: 20px 20px 0 0;
+    vertical-align: middle; /*pour coller l'img à la div qui suit, fonctionne aussi avec la valeur top et bottom, sinon il y a un espace*/
+    object-fit: cover;
+    object-position: bottom;
+}
+.image{
+    position: relative;
+    &_center{
+        object-position: 80% 60%; 
+        &--header{ 
+        width: 380px;
+        object-position: 80% 50%; 
+        }
+    }
+    
+}
+
+.new{
+    background-color: $tertiary-color;
+    color: adjust-color($tertiary-color,  $saturation: 44%, $lightness: -48%);
+    font-weight: 500;
+    font-family: 'Roboto';
+    padding: 5px 10px;
+    display: block;
+    width: fit-content;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+
+
+@media screen and (min-device-width: 992px){
+
+
+    body header h1 {
+        
+        font-size: 30px;
+    }
+
+
+    .reservation{
+        padding-bottom: 50px;
+        .localisation{
+            padding: 0;
+            i{
+                font-size: 20px;
+                position: relative;
+                left: 50px;
+            }
+            input{
+                padding-bottom: 10px;
+                font-size: 20px;
+                text-align: left;
+                position: relative;
+                left: 50px;
+                margin-top: 10px;
+                padding-top: 0;
+
+            }
+        }
+        h2{
+            font-size: xx-large;
+        }
+        p{
+            top: -50px;
+        }
+        input{
+            padding: 10px 20px ;
+            font-size: x-large;
+        }
+    }
+
+    .fonctionnement{
+        padding: 0;
+        h2{
+            text-align: center;
+            font-size: xx-large;
+        }
+        ol{
+            display: flex;
+            justify-content: space-evenly;
+            font-size: 20px;
+            li{
+                width: 20vw;
+                height: 200px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                text-align: center;
+                padding-bottom: 30px;
+                &::before{
+                    font-size: 50px;
+                    position: relative;
+                    left: 30%;
+                    top: -50px;
+                }
+                i{
+                    font-size: 100px;
+                    align-self: center;
+                    position: relative;
+                    left: -30px;
+                    top: -30px;
+                }
+                
+            }
+        }
+    }
+
+    .restaurants{
+        h2{
+            text-align: center;
+            font-size: xx-large;
+        }
+        &_cards{
+            display: flex;
+            flex-direction: row;
+            > div{
+                width: 22vw;
+                //height: 150px;
+                font-size: small;
+                img{
+                    width: 100%;
+                }
+            }
+
+        }
+    }
+
+    footer{
+        text-align: center;
+        padding-bottom: 30px;
+        font-size: x-large;
+        .footer_title{
+            font-size: xx-large;
+        }
+        i{
+            padding-right: 10px;
+        }
+    }
+}
+
+
+
+
+@media screen and (min-width: 992px){
+
+
+    body header h1 {
+        
+        font-size: 100px;
+    }
+
+
+    .reservation{
+        padding-bottom: 100px;
+        .localisation{
+            padding: 0 0 50px 0;
+            i{
+                font-size: 80px;
+                position: relative;
+                left: 50px;
+                margin-top: 50px;
+            }
+            input{
+                text-align: left;
+                position: relative;
+                left: 200px;
+                margin-top: 0;
+                padding-top: 0;
+
+            }
+        }
+        h2{
+            font-size: xxx-large;
+            padding-top: 50px;
+        }
+        p{
+            font-size: xx-large;
+        }
+        input{
+            font-size: xxx-large;
+            padding: 30px;
+            margin-top: 50px;
+        }
+    }
+
+    .fonctionnement{
+        padding: 0;
+        h2{
+            text-align: center;
+            font-size: xxx-large;
+        }
+        ol{
+            display: flex;
+            justify-content: space-evenly;
+            font-size: 50px;
+            li{
+                width: 20vw;
+                height: 500px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                text-align: center;
+                &::before{
+                    font-size: 50px;
+                    position: relative;
+                    left: 50%;
+                    top: -50px;
+                }
+                i{
+                    font-size: 200px;
+                    align-self: center;
+                    position: relative;
+                    left: -50px;
+                }
+                
+            }
+        }
+    }
+
+    .restaurants{
+        h2{
+            text-align: center;
+            font-size: xxx-large;
+        }
+        &_cards{
+            display: flex;
+            flex-direction: row-reverse;
+            > div{
+                width: 20vw;
+                height: 25%;
+                font-size: xx-large;
+                img{
+                    width: 100%;
+                }
+            }
+
+        }
+    }
+
+    footer{
+        text-align: center;
+        padding-bottom: 50px;
+        font-size: xx-large;
+        .footer_title{
+            font-size: xxx-large;
+        }
+        i{
+            padding-right: 20px;
+        }
+    }
+}
+
+
+
+/*mediaquerry desktop min width ≥992px V
+coeur ds chech pour clic V
+card height V
+animation check tourne V et deplace 
+animation chargement menu
+animation coeur a refaire
+git !
+prepa soutenaznce
+alt pr selection mulltiple
+*/
