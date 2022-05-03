@@ -18,19 +18,17 @@ header{
     width: 100%;
     background-color: $bg-color;
     border-radius: 50px 50px 0 0;
-    /*&_entrees{z-index: 2 ;}*/
     position: absolute;
-    /*position: relative; top: -80px;*/  z-index: 2 ; margin-top: -50px;
-    /*top: 350px;*/
+    z-index: 2 ; margin-top: -50px;
     > div {
         margin: 30px 10px;
     }
     &_img{
-        /*position: relative;*/
-        /*top: 50px;*/
         z-index: 1 ;
         border-radius: 0 0 0 0;
         width: 100vw;
+        height: 350px;
+        object-position: 30% 20%;
     }
     &_header{
         display: flex;
@@ -54,6 +52,11 @@ header{
     }
 }
 
+.fa-check-circle{
+    color: white;
+    font-size: x-large;
+}
+
 .choix{
     display: flex;
     justify-content: space-between;
@@ -66,16 +69,6 @@ header{
         overflow: hidden;
         text-overflow:ellipsis; 
         white-space: nowrap;
-        
-        /*width:300px;
-        @if (width: 300px){white-space: nowrap;
-        overflow:hidden;
-        text-overflow:clip;}@else {
-            overflow: hidden;
-            text-overflow:clip; white-space: wrap;}*/
-
-
-        /*@if (.choix_prix:hover) {white-space: nowrap;} @else {white-space: wrap;};*/
         h3{
             margin: 15px 0 5px 15px;
             overflow: hidden;
@@ -94,44 +87,49 @@ header{
         padding: 0 20px;
         p{
             margin-bottom: 10px;
-        }
-        &:hover + div{
-        display: initial;
-        display: flex;
-        align-items: center;
-        }
+         }
     }
     &_check{
         display: none;
         padding: 0 20px;
         background-color: $tertiary-color;
         border-radius: 0 20px 20px 0;
-        // transform-origin: 0% 50%; //deplace le centre d'origin à gauche (0% axe x et 50% axe y pour qu'il reste centré verticalement) retirer 50% (voir plus bas) ou mieux : juste "left" (voir encore plus bas)
-        // transform: scaleX(0); //s'elargie horizontalement
-        // transition: transform 1000ms cubic-bezier(.32,0,.07,1);//timing pour ralentir la fin
-        &:hover{
+        //animation: check_apparition 500ms reverse;
+    }
+    &:hover{
+        cursor: pointer;
+    }
+    &:active {
+        &>.choix_check{
             display: initial;
             display: flex;
             align-items: center;
-            cursor: pointer;
-            //transform: scaleX(1);
-            i{
-                transform: rotate(1turn);
-            }
+            //transform: scaleX(1);transition: transform 900ms ease-in-out;
+            animation: check_apparition  1s both;
+            transform-origin: 100% 50%; 
         }
         i{
-            color: white;
-            font-size: x-large;
-            transform: rotate(0turn);
-            transition: transform 500ms ease-in-out;
-            
+            animation: check_rotation   1s ease-in-out;
         }
-
     }
+
 }
 
-.entrees > div, .plats > div, .desserts > div{ //sans pseudoelement : au chargment de la page
-    animation: menu_apparition;
+
+
+
+.entrees div:nth-child(2), .plat  div:nth-child(2), .desserts div:nth-child(2){
+    animation: menu_apparition 1000ms  both;
+}
+
+.entrees div:nth-child(3), .plat div:nth-child(3), .desserts div:nth-child(3){
+    animation: menu_apparition 1000ms 300ms both;
+}
+.entrees div:nth-child(4), .plat div:nth-child(4), .desserts div:nth-child(4){
+    animation: menu_apparition 1000ms 600ms both ;
+}
+.entrees div:nth-child(5), .plat div:nth-child(5), .desserts div:nth-child(5){
+    animation: menu_apparition 1000ms 900ms both ;
 }
 
 
@@ -152,4 +150,18 @@ header{
             object-position: 0 60%;
 
         }
+
+    .choix:hover {
+        &>.choix_check{
+            display: initial;
+            display: flex;
+            align-items: center;
+            //transform: scaleX(1);transition: transform 900ms ease-in-out;
+            animation: check_apparition 1s both;
+            transform-origin: 100% 50%; 
+        }
+        i{
+            animation: check_rotation  1s ease-in-out;
+        }
+    }
 }

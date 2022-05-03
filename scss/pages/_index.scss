@@ -1,3 +1,29 @@
+.loading {
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.646);
+    animation: awhite 2s both;
+}
+.spinner {
+    position: fixed;
+    z-index: 2;
+    //background-color: $tertiary-color;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    height: 65px;
+    width: 65px;
+    //border-style: ridge;
+    border: 10px double $tertiary-color;
+    border-top-color: $primary-color;
+    border-bottom-color: $secondary-color;
+    border-radius: 100%;
+    animation: loading 2s linear both;
+  }
+
+
 .reservation {
     background-color: $bg-color;
     text-align: center;
@@ -368,10 +394,14 @@ img{
 /*mediaquerry desktop min width ≥992px V
 coeur ds chech pour clic V
 card height V
-animation check tourne V et deplace 
-animation chargement menu
-animation coeur a refaire
-git !
+animation check tourne V et deplace V
+animation chargement menu V
+animation coeur a refaire V
+loading spinner V
+validation csshtml V sauf min width device !
+retour coche bleu et bord qui depassent !
+git ! V
 prepa soutenaznce
+
 alt pr selection mulltiple
 */
