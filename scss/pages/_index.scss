@@ -9,13 +9,11 @@
 .spinner {
     position: fixed;
     z-index: 2;
-    //background-color: $tertiary-color;
     top: 50%;
     left: 50%;
     margin: -25px 0 0 -25px;
     height: 65px;
     width: 65px;
-    //border-style: ridge;
     border: 10px double $tertiary-color;
     border-top-color: $primary-color;
     border-bottom-color: $secondary-color;
@@ -34,13 +32,9 @@
 }
 
 .localisation {
-    /*background-color: darken($bg-color,4);*/
-    /*box-shadow: inset 0 1em darken($bg-color,15);*/
     background: linear-gradient(darken($bg-color,15) 1%, darken($bg-color,4) 8%);
-    /*border-top: 5px groove darken($bg-color,15);*/
     text-align: center;
     padding: 5% 0 5% 0;
-    /*border-top: 10px solid linear-gradient(darken($bg-color,15), darken($bg-color,4)) ;*/
 }
 
 .search {
@@ -123,6 +117,9 @@ ol {
     display: flex;
     justify-content: space-between; /*horizontal*/
     align-items: center; /*vertical*/
+    a{
+        flex: 1;
+    }
 
     h3, p{
         margin: 0;
@@ -166,8 +163,87 @@ img{
 }
 
 
+@media only screen and (min-width: 769px){ //laptop&desktop
+    body header h1 {
+        
+        font-size: 20px;
+    }
 
-@media screen and (min-device-width: 992px){
+    .reservation{
+        padding-bottom: 30px;
+        .localisation{
+            padding: 10px;
+            .search{
+                text-align: left;
+                width: 150px;
+            }
+        }
+        p, h2{
+            margin: 10px;
+        }
+    }
+
+    .fonctionnement{
+        padding: 0;
+        margin: 0;
+        h2{
+            text-align: center;
+            margin: 10px;
+        }
+        ol{
+            display: flex;
+            justify-content: space-around;
+            margin: 10px;
+            li{
+                height: 50px;
+                width: 25%;
+                text-align: center;
+                margin: 10px 0;
+                padding-top: 10px;
+                display: flex;
+                align-content: space-between;
+                align-items: baseline;
+                &::before{
+                    font-size: large;
+                    left: 50%;
+                    top: -30px;
+                }
+                i{
+                    font-size: xx-large;
+                    left: -5%;
+                    top: 30%;
+                    position: relative;
+                }
+            }
+        }
+    }
+
+    .restaurants{
+        h2{
+            text-align: center;
+            margin: 10px;
+            padding: 0;
+        }
+        &_cards{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            &>div{
+                margin: 10px 0; 
+            }
+        }
+
+    }
+
+
+    footer{
+        text-align: center;
+        padding: 10px 0 20px 0;
+    }
+}
+
+
+@media only screen and (min-width: 481px) and (max-width: 769px){ //tablet
 
 
     body header h1 {
@@ -254,7 +330,6 @@ img{
             flex-direction: row;
             > div{
                 width: 22vw;
-                //height: 150px;
                 font-size: small;
                 img{
                     width: 100%;
@@ -279,129 +354,3 @@ img{
 
 
 
-
-@media screen and (min-width: 992px){
-
-
-    body header h1 {
-        
-        font-size: 100px;
-    }
-
-
-    .reservation{
-        padding-bottom: 100px;
-        .localisation{
-            padding: 0 0 50px 0;
-            i{
-                font-size: 80px;
-                position: relative;
-                left: 50px;
-                margin-top: 50px;
-            }
-            input{
-                text-align: left;
-                position: relative;
-                left: 200px;
-                margin-top: 0;
-                padding-top: 0;
-
-            }
-        }
-        h2{
-            font-size: xxx-large;
-            padding-top: 50px;
-        }
-        p{
-            font-size: xx-large;
-        }
-        input{
-            font-size: xxx-large;
-            padding: 30px;
-            margin-top: 50px;
-        }
-    }
-
-    .fonctionnement{
-        padding: 0;
-        h2{
-            text-align: center;
-            font-size: xxx-large;
-        }
-        ol{
-            display: flex;
-            justify-content: space-evenly;
-            font-size: 50px;
-            li{
-                width: 20vw;
-                height: 500px;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                text-align: center;
-                &::before{
-                    font-size: 50px;
-                    position: relative;
-                    left: 50%;
-                    top: -50px;
-                }
-                i{
-                    font-size: 200px;
-                    align-self: center;
-                    position: relative;
-                    left: -50px;
-                }
-                
-            }
-        }
-    }
-
-    .restaurants{
-        h2{
-            text-align: center;
-            font-size: xxx-large;
-        }
-        &_cards{
-            display: flex;
-            flex-direction: row-reverse;
-            > div{
-                width: 20vw;
-                height: 25%;
-                font-size: xx-large;
-                img{
-                    width: 100%;
-                }
-            }
-
-        }
-    }
-
-    footer{
-        text-align: center;
-        padding-bottom: 50px;
-        font-size: xx-large;
-        .footer_title{
-            font-size: xxx-large;
-        }
-        i{
-            padding-right: 20px;
-        }
-    }
-}
-
-
-
-/*mediaquerry desktop min width ≥992px V
-coeur ds chech pour clic V
-card height V
-animation check tourne V et deplace V
-animation chargement menu V
-animation coeur a refaire V
-loading spinner V
-validation csshtml V sauf min width device !
-retour coche bleu et bord qui depassent !
-git ! V
-prepa soutenaznce
-
-alt pr selection mulltiple
-*/

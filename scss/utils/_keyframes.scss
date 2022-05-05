@@ -1,4 +1,3 @@
-
 @keyframes loading {
     0% {
         transform: rotate(0deg);
@@ -19,7 +18,11 @@
     }
   }
 
-  @keyframes awhite{
+
+
+  
+//backgroung white loading spinner
+  @keyframes awhite{ 
       0%{
           z-index: 1;
           opacity: 0;
@@ -42,45 +45,10 @@
   
   
   
-  @keyframes heart_hover{
-    0% {
-        transform: translate(0);
-    }
-    10% {
-        transform: translate(-1.5px,-1.5px);
-    }
-    1.50% {
-        transform: translate(1.5px,-1.5px);
-    }
-    30% {
-        transform: translate(-1.5px,1.5px);
-    }
-    40% {
-        transform: translate(1.5px,1.5px);
-    }
-    50% {
-        transform: translate(-1.5px,-1.5px);
-    }
-    60% {
-        transform: translate(1.5px,-1.5px);
-    }
-    70% {
-        transform: translate(-1.5px,1.5px);
-    }
-    80% {
-        transform: translate(-1.5px,-1.5px);
-    }
-    90% {
-        transform: translate(1.5px,-1.5px);
-    }
-    100% {
-        transform: translate(0);
-    }
-}
 
-//hover
 
-@keyframes shake-top {
+
+@keyframes shake-top {//heart hover
     0%{
       transform: rotate(0deg);
       transform-origin: 50% 0;
@@ -118,53 +86,7 @@
     }
   }
   
-
-
-@keyframes bounce-in-zoomin {
-    0%{
-        font-weight: 200; 
-        -webkit-text-fill-color:black;
-      transform: scale(7);
-      animation-timing-function: ease-in;
-      opacity: 0;
-    }
-    35%{
-      transform: scale(1);
-      animation-timing-function: ease-out;
-      opacity: 1;
-    }
-    55%{
-        font-weight: 800; 
-        -webkit-text-fill-color:transparent;
-      transform: scale(1.5);
-      animation-timing-function: ease-in;
-    }
-    70%{
-      transform: scale(1);
-      animation-timing-function: ease-out;
-    }
-    80%{
-      transform: scale(1.24);
-      animation-timing-function: ease-in;
-    }
-    90%{
-      transform: scale(1);
-      animation-timing-function: ease-out;
-    }
-    95%{
-      transform: scale(1.04);
-      animation-timing-function: ease-in;
-    }
-    100%{
-        font-weight: 800; 
-        -webkit-text-fill-color:transparent;
-      transform: scale(1);
-      animation-timing-function: ease-out;
-    }
-  }
-  
-
-
+  //heart active
 @keyframes bounce-out-zoomin {
     0%{
         font-weight: 200; 
@@ -187,9 +109,6 @@
         font-weight: 800; 
         -webkit-text-fill-color:transparent;
     }
-
-    //2e anim
-
     61%{
       transform: scale(1) translateX(1px);
       animation-timing-function: ease-out;
@@ -213,124 +132,25 @@
   
 
 
-@keyframes heart_active{
-    0%{
-        font-weight: 200; 
-        -webkit-text-fill-color:black;
-        transform: scale3d(1,1,1);
-    }
-    30%{
-        transform: scale3d(1.25,.75,1);
-    }
-    40%{
-        transform: scale3d(.75,1.25,1);
-    }
-    50%{
-        transform: scale3d(1.15,.85,1);
-        font-weight: 800; 
-        -webkit-text-fill-color:transparent;
-    }
-    65%{
-        transform: scale3d(.95,1.05,1);
-    }
-    75%{
-        transform: scale3d(1.05,.95,1);
-    }
-    100%{
-        transform: scale3d(1,1,1);
-        font-weight: 800; 
-        -webkit-text-fill-color:transparent;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@keyframes heart {
-    0% {
-        transform: scale(1);
-        font-weight: 200; 
-        -webkit-text-fill-color:black;
-    }
-    25% {
-        transform: translateX(10%);
-    }
-    30% {
-        transform: translateX(-10%);
-    }
-    35% {
-        transform: translateX(10%);
-    }
-    40% {
-        transform: translateX(-10%);
-    }
-    50% {
-        transform:  translateX(10%) scale(1);
-        font-weight: 800;
-        -webkit-text-fill-color:transparent;
-    }
-    65% {
-        transform: scale(1.5)  translateX(7%);
-    }
-    95% {
-        transform: scale(1.5)  translateX(7%);
-    }
-    99% {
-        transform: scale(1.3)  translateX(7%);
-    }
-    100% {
-        transform: scale(1)  translateX(7%);
-        font-weight: 800;
-        -webkit-text-fill-color:transparent;
-    }
-}
-
 
 
 @keyframes check_apparition{
     0%{
-        transform: scaleX(0);
-    }
-    30%{
-        transform: scaleX(1);
-    }
-    70%{
-        transform: scaleX(1);
+        transform: translateX(80px);
     }
     100%{
-        transform: scaleX(0);
+        transform: translateX(0);
     }
 }
+
+
 
 @keyframes check_rotation{
     0%{
         transform: rotate(0turn);
     }
-    30%{
-        transform: rotate(1turn);
-    }
-    70%{
-        transform: rotate(1turn);
-    }
     100%{
-        transform: rotate(0turn);
+        transform: rotate(1turn);
     }
 }
 
@@ -346,108 +166,3 @@
         transform: translateY(0px);
     }
 }
-
-
-/* rotate
-@keyframes heart {
-    0% {
-        transform: scale(1);
-        font-weight: 200; 
-        -webkit-text-fill-color:black;
-    }
-    25% {
-        transform: translateY(10%) rotate(30deg);
-    }
-    30% {
-        transform: translateY(-10%) rotate(-30deg);
-    }
-    //35% { transform: translateY(10%) rotate(30deg);}
-   // 40% {transform: translateY(-10%) rotate(-30deg);}
-    50% {
-        transform:  translateY(10%)  rotate(30deg) scale(1);
-        font-weight: 800;
-        -webkit-text-fill-color:transparent;
-    }
-    60% {
-        transform:  rotate(-30deg) scale(1)  translateY(-10%);
-    }
-    70% {
-        transform:  rotate(0deg) scale(1)  translateY(7%);
-    }
-    75% {
-        transform: scale(1)  translateY(7%);
-    }
-    80% {
-        transform: scale(1)  translateY(7%);
-    }
-    100% {
-        transform: scale(1)  translateY(7%);
-    }
-}/*
-
-
-/*
-sauutille
-@keyframes heart {
-    0% {
-        transform: scale(1);
-        font-weight: 200; 
-        -webkit-text-fill-color:black;
-    }
-    25% {
-        transform: translateY(10%) rotate(30deg);
-    }
-    30% {
-        transform: translateY(-10%) rotate(-30deg);
-    }
-    35% {
-        transform: translateY(10%) rotate(30deg);
-    }
-    40% {
-        transform: translateY(-10%) rotate(-30deg);
-    }
-    50% {
-        transform:  translateY(10%)  rotate(30deg) scale(1);
-        font-weight: 800;
-        -webkit-text-fill-color:transparent;
-    }
-    65% {
-        transform:  rotate(-30deg) scale(1)  translateY(-10%);
-    }
-    85% {
-        transform:  rotate(0deg) scale(1)  translateY(7%);
-    }
-    95% {
-        transform: scale(1.5)  translateY(7%);
-    }
-    99% {
-        transform: scale(1)  translateY(7%);
-    }
-    100% {
-        transform: scale(1)  translateY(7%);
-    }
-}
-
-*/
-
-
-/*-@keyframes heart {
-    0% {
-        transform: scaleX(.2);
-        font-weight: 200; 
-        -webkit-text-fill-color:black;
-    }
-    25% {
-        transform: scaleX(1.8);
-    }
-    50% {
-        transform: scaleX(1.1);
-        font-weight: 800;
-        -webkit-text-fill-color:transparent;
-    }
-    100% {
-        transform: scaleX(1);
-    }
-}*/
-
-//animation: heart 0ms $cat-delay;

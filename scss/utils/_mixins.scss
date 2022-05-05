@@ -1,14 +1,9 @@
-@mixin degrade{
-    
-    color: transparent;
-    -webkit-background-clip: text;
+@mixin heart{
+    font-weight: 800;
+    animation:  bounce-out-zoomin 1200ms ease-in-out ;
+    background: -webkit-gradient(linear, right bottom, right top, from($secondary-color), to($primary-color));
     background-clip: text;
-    -moz-background-clip: text;
-    background-image: linear-gradient($secondary-color, $primary-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
 }
-
-/*@mixin suspension {
-    @if (.choix_prix:hover){
-        white-space: nowrap;
-    }
-}*/

@@ -1,5 +1,3 @@
-//.under-img_icon{    color: black;}
-
 .fa-heart{
     
     -webkit-text-fill-color: black;
@@ -8,23 +6,6 @@
     &:hover{
         cursor: pointer;
     }
-    //color: white;
-    //text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
-    //transition: color 500ms;
-    // &:active{
-    //     font-weight: 800;
-    //     animation: heart 700ms ease-in-out both;
-    //     background: -webkit-gradient(linear, right bottom, right top, from($secondary-color), to($primary-color));
-    //     background-clip: text;
-    //     -webkit-background-clip: text;
-    //     -webkit-text-fill-color: transparent;
-    //     cursor: pointer;
-    // }
-    // &:visited{
-        
-    //     background: -webkit-gradient(linear, right bottom, right top, from($secondary-color), to($primary-color));
-    //     color: blue;
-    // }
 }
 
 
@@ -36,13 +17,7 @@
         animation: shake-top 900ms ease-in-out infinite both;
     }
     &:checked + label i{
-    font-weight: 800;
-    animation:  bounce-out-zoomin 1200ms ease-in-out ;
-    background: -webkit-gradient(linear, right bottom, right top, from($secondary-color), to($primary-color));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    cursor: pointer;}
+        @include heart}
 }
 #heart1 {
     display: none;
@@ -50,13 +25,7 @@
         animation: shake-top 1000ms linear infinite both;
     }
     &:checked + label .i_heart1{
-    font-weight: 800;
-    animation:  bounce-out-zoomin 1200ms ease-in-out ;
-    background: -webkit-gradient(linear, right bottom, right top, from($secondary-color), to($primary-color));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    cursor: pointer;}
+        @include heart}
 }
 #heart2 {
     display: none;
@@ -64,13 +33,7 @@
         animation: shake-top 1000ms linear infinite both;
     }
     &:checked + label .i_heart2 {
-    font-weight: 800;
-    animation:  bounce-out-zoomin 1200ms ease-in-out ;
-    background: -webkit-gradient(linear, right bottom, right top, from($secondary-color), to($primary-color));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    cursor: pointer;}
+    @include heart}
 }
 #heart3 {
     display: none;
@@ -78,13 +41,7 @@
         animation: shake-top 1000ms linear infinite both;
     }
     &:checked + label .i_heart3 {
-    font-weight: 800;
-    animation:  bounce-out-zoomin 1200ms ease-in-out ;
-    background: -webkit-gradient(linear, right bottom, right top, from($secondary-color), to($primary-color));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    cursor: pointer;}
+        @include heart}
 }
 #heart4 {
     display: none;
@@ -92,59 +49,5 @@
         animation: shake-top 1000ms linear infinite both;
     }
     &:checked + label .i_heart4 {
-    font-weight: 800;
-    animation:  bounce-out-zoomin 1200ms ease-in-out ;
-    background: -webkit-gradient(linear, right bottom, right top, from($secondary-color), to($primary-color));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    cursor: pointer;}
+        @include heart}
 }
-
-
-
-/*.fa-heart{
-    padding-right: 10px;
-    font-size: x-large;
-    color: white;
-    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
-    transition: color 500ms;
-    &:hover{
-        color: transparent;
-        -webkit-background-clip: text;
-        background-clip: text;
-        -moz-background-clip: text;
-        background-image: linear-gradient($secondary-color, $primary-color);
-    
-        
-        cursor: pointer;
-    }
-}*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*.fa-heart{
-    padding-right: 10px;
-    font-size: x-large;
-    color: white;
-    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
-    transition: color 500ms;
-    &:hover{
-        @include degrade;
-        cursor: pointer;
-    }
-}*/
