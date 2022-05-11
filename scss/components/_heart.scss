@@ -1,5 +1,4 @@
 .fa-heart{
-    
     -webkit-text-fill-color: black;
     padding-right: 10px;
     font-size: x-large;
@@ -17,37 +16,46 @@
         animation: shake-top 900ms ease-in-out infinite both;
     }
     &:checked + label i{
-        @include heart}
+        @include heart
+    }
 }
+
 #heart1 {
     display: none;
     &:hover + label .i_heart1{
         animation: shake-top 1000ms linear infinite both;
     }
     &:checked + label .i_heart1{
-        @include heart}
+        @include heart
+    }
 }
+
 #heart2 {
     display: none;
     &:hover + label .i_heart2{
         animation: shake-top 1000ms linear infinite both;
     }
     &:checked + label .i_heart2 {
-    @include heart}
+    @include heart
+    }
 }
+
 #heart3 {
     display: none;
     &:hover + label .i_heart3{
         animation: shake-top 1000ms linear infinite both;
     }
     &:checked + label .i_heart3 {
-        @include heart}
+        @include heart
+    }
 }
+
 #heart4 {
     display: none;
     &:hover + label .i_heart4{
         animation: shake-top 1000ms linear infinite both;
     }
     &:checked + label .i_heart4 {
-        @include heart}
+        @include heart
+    }
 }
