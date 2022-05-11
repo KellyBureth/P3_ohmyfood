@@ -1,0 +1,252 @@
+
+
+header{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: baseline;
+    i{
+        flex:3;
+        font-size: large;
+        margin-left: 20px;
+    }
+    h1{
+        flex:2;
+        margin: 10px 30px 10px 0;
+        font-size: x-large;
+    }
+}
+
+.menu{
+    width: 100%;
+    background-color: $bg-color;
+    border-radius: 50px 50px 0 0;
+    position: absolute;
+    z-index: 2 ; margin-top: -50px;
+    > div {
+        margin: 30px 10px;
+    }
+    &_img{
+        z-index: 1 ;
+        border-radius: 0 0 0 0;
+        width: 100vw;
+        height: 350px;
+        object-position: 30% 20%;
+    }
+    &_header{
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 0;
+    }
+    h1{
+        padding-top: 10px;
+        text-align: left;
+        padding-left: 10px;
+        font-size:x-large;
+        font-weight: 400;
+    }
+    h4{
+        width: 40px;
+        border-bottom: 3px solid $tertiary-color;
+    }
+    .fa-heart{
+        color: $bg-color;
+    }
+}
+
+.fa-check-circle{
+    color: white;
+    font-size: x-large;
+}
+
+.choix{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 20px;
+    margin: 10px 0;
+    box-shadow: 0 5px 5px darken($bg-color,15);
+    overflow: hidden; //pour cacher la bordure de l'animation de la coche
+    &_txt{
+        flex: 1;
+        overflow: hidden;
+        white-space: nowrap;
+        h3{
+            margin: 15px 0 5px 15px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        p{
+            margin: 5px 0 15px  15px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    &_prix{
+        width: 0px;
+        margin-left: -40px;
+        padding-left: 5px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-evenly;
+        padding: 0 40px 0 20px;
+        transform: translateX(40px);
+        transition: all 0.5s ;
+        vertical-align: middle;
+        p{
+            margin-bottom: 15px;
+            font-weight: bold;
+         }
+    }
+    &_check{
+        width: 0px;
+        padding: 0 20px;
+        background-color: $tertiary-color;
+        border-radius: 0 20px 20px 0;
+  transform: translateX(40px);
+          transition: all 0.5s ;
+  display: flex; 
+          align-items:center;
+          justify-content: center;
+      
+        i{
+        transform: rotate(0turn);
+          transition: all 0.6s ; ;
+        } 
+  }
+  
+        &:active{
+        cursor: pointer;
+        &>.choix_check{
+           transform: translateX(1px);
+           width: 8%;
+        }
+        i{
+          
+        transform: rotate(1turn);
+        }
+        &>.choix_prix{
+           transform: translateX(0);
+           width: 0px;
+           margin-left: 0px;
+        }
+        &>.choix_txt{
+            //transform: translateX(2px);
+            overflow: hidden;
+            text-overflow:ellipsis; 
+            white-space: nowrap;
+        }
+      }
+}
+
+.entrees > div:nth-child(2), .plat>  div:nth-child(2), .desserts >div:nth-child(2){
+    animation: menu_apparition 1000ms  both;
+}
+
+.entrees> div:nth-child(3), .plat> div:nth-child(3), .desserts> div:nth-child(3){
+    animation: menu_apparition 1000ms 300ms both;
+}
+.entrees> div:nth-child(4), .plat> div:nth-child(4), .desserts> div:nth-child(4){
+    animation: menu_apparition 1000ms 600ms both ;
+}
+.entrees >div:nth-child(5), .plat> div:nth-child(5), .desserts> div:nth-child(5){
+    animation: menu_apparition 1000ms 900ms both ;
+}
+
+
+@media screen and (min-width: 820px){ 
+
+
+        header{
+            background-color: $bg-color;
+        }
+        .menu{
+            width: 60vw;
+            margin: 10vw 20vw 0 20vw;
+            text-align: center;
+            &_header{
+                flex-direction: column;
+                align-items: center;}
+            >div h4{
+                width: 10vw;
+                margin: auto;
+            }
+            &_img{
+                width:100vw;height: 100%;position:fixed;bottom:0;right:0;    object-position: 30% -170px;z-index:-1;
+            }
+            .choix{
+            &_txt{
+                transform: translateX(0) scale(1);
+                transition: all 0.5s ;
+                
+            }
+            &_prix{
+                width: 0px;
+                margin-left: -40px;
+                padding-left: 5px;
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-evenly;
+                padding: 0 40px 0 20px;
+                transform: translateX(10px);
+                transition: all 0.5s;
+                vertical-align: middle;
+                
+                p{
+                    margin-bottom: 15px;
+                    font-weight: bold;
+                 }
+            }
+            &_check{
+                width: 0px;
+                background-color: $tertiary-color;
+                border-radius: 0 20px 20px 0;
+          transform: translateX(40px);
+                  transition: all 0.5s ;
+          display: flex; 
+                padding: 0px;
+              
+                i{
+                transform: rotate(0turn);
+                  transition: all 0.6s ; 
+                } 
+          }
+        }
+        }
+    
+            .image_center{
+                object-position: 0 60%;
+    
+            }
+    
+        .choix{
+            &:hover{
+                cursor: pointer;
+                &>.choix_check{
+                   transform: translateX(0px);
+                   width: 8%;
+                   display: flex; 
+                           align-items:center;
+                           justify-content: center;
+                }
+                i{
+                  
+                transform: rotate(1turn);
+                display: flex; 
+                        align-items:center;
+                        justify-content: center;
+                }
+                &>.choix_prix{
+                   transform: translateX(10px) ;
+                }
+                &>.choix_txt{
+                    //transform: translateX(2px);
+                    transform: scale(1.1) translateX(30px);
+                }
+              }
+    
+    &:active{
+        cursor: pointer;
+        &>.choix_txt{transform: translateX(50px);}
+    }
+}}
